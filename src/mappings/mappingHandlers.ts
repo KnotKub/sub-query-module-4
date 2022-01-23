@@ -40,3 +40,10 @@ export async function handleSumRewarded(event: SubstrateEvent): Promise<void> {
     entity.blockHeight = event.block.block.header.number.toNumber();
     await entity.save();
 }
+
+export async function handleSumReward(event: SubstrateEvent): Promise<void> {
+    await handleSumRewarded(event)
+}
+export async function handleStakingReward(event: SubstrateEvent): Promise<void> {
+    await handleStakingRewarded(event)
+}
