@@ -3,5 +3,10 @@ type StakingReward @entity{
   account: String!
   balance: BigInt!
   date: Date!
+}
+
+type SumReward @entity{
+  id: ID! # AccountId
+  totalReward: BigInt!
   blockHeight: Int!
 }
